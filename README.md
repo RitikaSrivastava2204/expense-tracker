@@ -1,5 +1,7 @@
 # 💰 Expense Tracker App: Penthara Technologies Assignment
 
+**Live Demo:** [Click Here to View the App on Netlify!] https://expense-trackerdemo.netlify.app/
+
 This is a minimal, clean, and efficient **Expense Tracker** application built using **React** and **Vite** as a technical assignment for Penthara Technologies. The application is designed to demonstrate strong component architecture and frontend data flow principles.
 
 ## 🚀 Getting Started
