@@ -26,6 +26,7 @@ const ExpenseItem = (props) => {
       <div className="expense-item__date">{formattedDate}</div>
       <div className="expense-item__description">
         <h3 className="expense-item__category">{props.category}</h3>
+        <div className="expense-item__actions">
         <div className="expense-item__price">Rs. {props.amount.toFixed(2)}</div>
         
         <button 
@@ -34,6 +35,7 @@ const ExpenseItem = (props) => {
         >
           delete
         </button>
+        </div>
       </div>
     </li>
   );

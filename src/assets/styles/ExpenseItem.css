@@ -53,6 +53,10 @@
     
     margin-right: 1.5rem; 
 }
+.expense-item__actions{
+  display: flex;
+  
+}
 .delete-button {
   background: none;
   border: none;

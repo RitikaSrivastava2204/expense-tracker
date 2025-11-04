@@ -1,0 +1,33 @@
+/* src/components/ExpenseFilter.css */
+
+.expenses-filter {
+    display: flex;
+    /* CHANGE 1: Pushes content to the far ends of the container */
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    /* REMOVED: gap is no longer needed when using space-between */
+  }
+  
+  .expenses-filter__control {
+    display: flex;
+    flex-direction: column;
+    /* CHANGE 2: Ensures the selector stays left-aligned */
+    margin-right: 2rem; 
+  }
+  
+  .expenses-filter__control label {
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .expenses-filter__control select {
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+    cursor: pointer;
+  }

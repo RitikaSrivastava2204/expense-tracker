@@ -1,0 +1,27 @@
+/* src/components/ExpenseSummary.css */
+
+.expense-summary {
+    background-color: #f0f8ff; /* Light blue background for emphasis */
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #cceeff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 150px;
+  }
+  
+  .summary-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #666;
+    margin: 0;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+  }
+  
+  .summary-amount {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #007bff; /* Primary blue color */
+  }
