@@ -1,7 +1,5 @@
-/* src/components/ExpenseSummary.css */
-
 .expense-summary {
-    background-color: #f0f8ff; /* Light blue background for emphasis */
+    background-color: #f0f8ff; 
     padding: 1rem 1.5rem;
     border-radius: 8px;
     border: 1px solid #cceeff;
@@ -23,5 +21,5 @@
   .summary-amount {
     font-size: 1.6rem;
     font-weight: 700;
-    color: #007bff; /* Primary blue color */
+    color: #007bff; 
   }

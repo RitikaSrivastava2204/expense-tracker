@@ -1,5 +1,3 @@
-// src/components/ExpenseSummary.jsx
-
 import React from 'react';
 import '../assets/styles/ExpenseSummary.css'; 
 
@@ -9,13 +7,10 @@ import '../assets/styles/ExpenseSummary.css';
  * @param {Array<Object>} props.expenses - The currently filtered list of expense objects.
  */
 const ExpenseSummary = (props) => {
-  // 1. Calculate the total expense amount
   const total = props.expenses.reduce((acc, expense) => acc + expense.amount, 0);
-
-  // 2. Format the total to a currency string
   const formattedTotal = total.toLocaleString('en-US', {
     style: 'currency',
-    currency: 'INR', // Assuming USD currency
+    currency: 'INR',
   });
 
   return (

@@ -1,5 +1,3 @@
-
-
 .expense-item {
     display: flex; 
     justify-content: space-between; 
@@ -13,7 +11,6 @@
     border-left: 5px solid #007bff; 
   }
   
-  
   .expense-item__date {
     font-size: 0.9rem;
     font-weight: 500;
@@ -21,7 +18,6 @@
     min-width: 100px; 
     text-align: left;
   }
-  
   
   .expense-item__description {
     display: flex;
@@ -55,7 +51,7 @@
 }
 .expense-item__actions{
   display: flex;
-  
+
 }
 .delete-button {
   background: none;

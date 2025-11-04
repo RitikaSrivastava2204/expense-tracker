@@ -1,73 +1,63 @@
-💰 Expense Tracker App: Penthara Technologies Assignment
-This is a minimal, clean, and efficient Expense Tracker application built using React and Vite as a technical assignment for Penthara Technologies.
+# 💰 Expense Tracker App: Penthara Technologies Assignment
 
-🚀 Getting Started
-This project was bootstrapped with Vite. To run the application locally, follow these simple steps:
+This is a minimal, clean, and efficient **Expense Tracker** application built using **React** and **Vite** as a technical assignment for Penthara Technologies. The application is designed to demonstrate strong component architecture and frontend data flow principles.
 
-Clone the repository:
+## 🚀 Getting Started
 
-Bash
+The project uses modern tools (Vite) and standard practices. To run the application locally, follow these simple steps:
 
-git clone https://github.com/RitikaSrivastava2204
-Navigate to the project folder:
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/RitikaSrivastava2204
+    ```
+2.  **Navigate to the project folder:**
+    ```bash
+    cd expense-tracker 
+    ```
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+4.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
 
-Bash
+The application will open in your browser, typically at `http://localhost:5173`.
 
-cd expense-tracker
-Install dependencies:
+---
 
-Bash
+## ✨ Technical Concepts & Implementation
 
-npm install
-Start the development server:
+The project was structured to align with the assignment's best practices and showcase key React principles.
 
-Bash
+### 1. Architecture and Best Practices
 
-npm run dev
-The application will open in your browser, typically at http://localhost:5173.
+* **Code Separation of Concerns:** Logic is strictly separated from the UI. Initial data and filtering functions reside in the dedicated **`src/services/ExpenseService.js`** file.
+* **Component Structure:** The file structure strictly adheres to the requested best practices, utilizing dedicated folders for `components/`, `pages/`, and `services/`.
+* **UI/UX:** Styling prioritizes a minimal and aesthetic look, utilizing the **Poppins font** and displaying amounts in **Indian Rupees (₹)** (`INR`).
 
-✨ Key Features & Concepts Used
-The core goal of this project was to demonstrate strong frontend architecture, clean code, and effective state management.
+### 2. React Functionality & Data Flow
 
-1. Architectural & Code Best Practices
-Component-Based Architecture: The application is cleanly divided into reusable components (ExpenseForm, ExpenseList, ExpenseItem, etc.) and page views (HomePage, ExpensesPage).
+* **State Management:** Core data is managed using the **`useState` hook** within the parent `ExpensesPage`.
+* **Data Flow:** New items are added using the **"Lifting State Up"** pattern (from `ExpenseForm` to `ExpensesPage`). Deletion is handled immutably using JavaScript's `.filter()` method.
+* **Dynamic Filtering & Summary:** The expense list is dynamically filtered by **Category**. The total expense for the selected category is calculated and displayed live.
+* **Routing:** **React Router DOM** is used for single-page navigation between the Home page and the Expenses page.
 
-Code Separation of Concerns: We adhere to the best practice of separating UI logic from data logic:
+---
 
-UI/State: Handled in src/pages/ExpensesPage.jsx.
+## 🚧 Limitations and Future Scope
 
-Data Logic: Handled in the dedicated src/services/ExpenseService.js (for filtering and initial data).
+This is an MVP focused on demonstrating core requirements. For a production environment, the following would be addressed:
 
-File Structure & Naming: Follows the specified best practices (e.g., PascalCase for components, camelCase for variables, clear folder structure).
+### Limitations (Current Implementation)
 
-Component-Scoped Styling: Styles are kept modular (e.g., ExpenseItem.css only contains styles for that component).
+* **Prop Drilling:** The delete functionality involves **prop drilling** through the `ExpenseList` component to reach the `ExpenseItem`.
+* **No Persistence:** Data is stored only in the browser's memory (`useState`) and is lost upon refresh.
 
-Currency Localization: Expense amounts are formatted using Indian Rupees (₹) (INR).
+### Future Enhancements
 
-2. React Functionality
-React Hooks (useState): Used extensively to manage all critical application data (the list of expenses and the active filter settings).
-
-Data Flow & State Lifting: The form uses controlled inputs and lifts state up to the ExpensesPage component to add new items to the main list.
-
-Functional List Management: The application uses JavaScript array methods (.map, .filter, .reduce) to dynamically render the list, calculate totals, and delete items.
-
-React Router DOM: Used to create simple, fast navigation between the "Home" page and the main "My Expenses" page without full page reloads.
-
-🚧 Limitations and Future Scope
-This is an MVP (Minimum Viable Product) focused on core requirements. As a next step, the following features would be implemented to make it a production-ready application:
-
-Limitations (Current Implementation)
-Prop Drilling: The delete functionality involves prop drilling through the ExpenseList component to reach the ExpenseItem. This was a conscious choice for clarity in a small project.
-
-No Persistence: Currently, the data is stored only in the browser's memory (React State). If the browser tab is closed or the page is refreshed, all data is lost.
-
-Future Scope
-Context API Refactoring: Refactor the expense state and handlers (add, delete) using the React Context API to eliminate prop drilling and provide cleaner access to data throughout the component tree.
-
-Data Persistence: Implement a simple local storage solution (using localStorage) or integrate a backend (like Firebase or a mock REST API) to ensure data is saved permanently.
-
-Advanced Filtering: Add the ability to filter by Date Range or Year for more granular tracking.
-
-Data Visualization: Implement the optional requirement by adding a Chart Component (e.g., using Recharts) to visually summarize expenses per category.
-
-Input Validation: Add better error messages and disable the submit button until the form fields are valid.
+1.  **Context API Refactoring:** Refactor the expense state and handlers using the **React Context API** to manage global state and eliminate prop drilling.
+2.  **Data Persistence:** Integrate **`localStorage`** or set up a simple mock API to save user data permanently.
+3.  **Data Visualization:** Implement the optional requirement by adding a **Chart Component** (e.g., using Recharts) to visually summarize spending.
+4.  **Advanced Filtering:** Add filtering by **Date Range** or **Year**.

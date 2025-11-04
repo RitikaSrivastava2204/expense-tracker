@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../assets/styles/ExpenseForm.css'; // Assuming you kept your styles in a separate file
+import '../assets/styles/ExpenseForm.css'; 
 
 const ExpenseForm = (props) => {
   const [enteredAmount, setEnteredAmount] = useState('');

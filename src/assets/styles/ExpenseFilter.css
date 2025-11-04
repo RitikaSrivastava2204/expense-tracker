@@ -1,19 +1,14 @@
-/* src/components/ExpenseFilter.css */
-
 .expenses-filter {
     display: flex;
-    /* CHANGE 1: Pushes content to the far ends of the container */
     justify-content: space-between; 
     align-items: center;
     padding: 1rem 0;
     margin-bottom: 1rem;
-    /* REMOVED: gap is no longer needed when using space-between */
   }
   
   .expenses-filter__control {
     display: flex;
     flex-direction: column;
-    /* CHANGE 2: Ensures the selector stays left-aligned */
     margin-right: 2rem; 
   }
   
