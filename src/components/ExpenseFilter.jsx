@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import ExpenseSummary from './ExpenseSummary'; // 👈 NEW: Import the summary
+import ExpenseSummary from './ExpenseSummary'; 
 import '../assets/styles/ExpenseFilter.css'; 
 
 /**
