@@ -1,0 +1,88 @@
+
+
+.expense-item {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    
+    background-color: white; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04); 
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    margin: 1rem 0; 
+    border-left: 5px solid #007bff; 
+  }
+  
+  
+  .expense-item__date {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #777;
+    min-width: 100px; 
+    text-align: left;
+  }
+  
+  
+  .expense-item__description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1; 
+    margin-left: 2rem;
+  }
+  
+  .expense-item__category {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+  }
+  
+  
+  .expense-item__price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #28a745; 
+    background-color: #e2f0e6; 
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    min-width: 90px; 
+    text-align: right;
+  }
+.expense-item__price {
+    
+    margin-right: 1.5rem; 
+}
+.delete-button {
+  background: none;
+  border: none;
+  color: #dc3545; 
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1; 
+  transition: color 0.2s, transform 0.2s;
+}
+
+.delete-button:hover {
+  color: #c82333;
+  transform: scale(1.1);
+}
+
+  @media (max-width: 600px) {
+    .expense-item {
+      flex-direction: column; 
+      align-items: stretch;
+      padding: 1rem;
+    }
+    
+    .expense-item__date {
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+  
+    .expense-item__description {
+      margin-left: 0;
+      justify-content: space-between;
+    }
+  }
